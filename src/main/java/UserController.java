@@ -6,7 +6,7 @@ public class UserController {
     private static final String HEADER = "Content-type";
     private static final String HEADER_TYPE = "application/json";
 
-    public static void newUser(CreateUser createUser) {
+    public static void newUser(createUser createUser) {
         given()
                 .header(HEADER, HEADER_TYPE)
                 .body(createUser)
@@ -22,13 +22,13 @@ public class UserController {
                 .delete(USER_PATH);
     }
 
-    public static String getUserToken(LoginUser loginUser) {
+    public static String getUserToken(loginUser loginUser) {
         Response response = login(loginUser);
         String accessToken = response.jsonPath().get("accessToken");
         return accessToken.replace("Bearer ","");
     }
 
-    public static Response login(LoginUser loginUser) {
+    public static Response login(loginUser loginUser) {
         return
                 given()
                         .header(HEADER, HEADER_TYPE)
