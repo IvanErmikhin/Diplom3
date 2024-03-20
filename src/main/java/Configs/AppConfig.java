@@ -1,7 +1,6 @@
-package Configs;
+package configs;
 
 public class AppConfig {
-    public static final String YANDEX_BIN_PATH = "C:\\Users\\mussh\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe";
     public static final String APP_URL = "https://stellarburgers.nomoreparties.site/";
     public static final String REGISTER_PATH = "/api/auth/register";
     public static final String USER_PATH = "/api/auth/user";

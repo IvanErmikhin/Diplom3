@@ -1,7 +1,7 @@
 import org.openqa.selenium.WebDriver;
 
-import static PageObject.LocatorsMainPage.PERSONAL_ACCOUNT_BUTTON;
-import static PageObject.LocatorsRegistrationPage.*;
+import static pages.LocatorsMainPage.PERSONAL_ACCOUNT_BUTTON;
+import static pages.LocatorsRegistrationPage.*;
 
 public class RegisterPage {
     private final WebDriver driver;
@@ -20,15 +20,15 @@ public class RegisterPage {
     }
 
     public void sendKeyName(String name) {
-        driver.findElement(PageObject.LocatorsRegistrationPage.NAME_INPUT).sendKeys(name);
+        driver.findElement(pages.LocatorsRegistrationPage.NAME_INPUT).sendKeys(name);
     }
 
     public void setEmail(String email) {
-        driver.findElement(PageObject.LocatorsRegistrationPage.EMAIL_INPUT).sendKeys(email);
+        driver.findElement(pages.LocatorsRegistrationPage.EMAIL_INPUT).sendKeys(email);
     }
 
     public void setPassword(String password) {
-        driver.findElement(PageObject.LocatorsRegistrationPage.PASSWORD_INPUT).sendKeys(password);
+        driver.findElement(pages.LocatorsRegistrationPage.PASSWORD_INPUT).sendKeys(password);
     }
 
     public void registration(String name, String email, String password) {

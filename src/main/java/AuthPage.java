@@ -1,6 +1,6 @@
 import org.openqa.selenium.WebDriver;
 
-import static PageObject.LocatorsAuthPage.*;
+import static pages.LocatorsAuthPage.*;
 
 
 public class AuthPage {
@@ -10,10 +10,10 @@ public class AuthPage {
         this.webDriver = webDriver;
     }
     public void sendKeyEmail(String email) {
-        webDriver.findElement(PageObject.LocatorsAuthPage.EMAIL_INPUT).sendKeys(email);
+        webDriver.findElement(pages.LocatorsAuthPage.EMAIL_INPUT).sendKeys(email);
     }
     public void sendKeyPassword(String password) {
-        webDriver.findElement(PageObject.LocatorsAuthPage.PASS_INPUT).sendKeys(password);
+        webDriver.findElement(pages.LocatorsAuthPage.PASS_INPUT).sendKeys(password);
     }
     public void signIn() {
         webDriver.findElement(SIGN_IN_BUTTON).click();
