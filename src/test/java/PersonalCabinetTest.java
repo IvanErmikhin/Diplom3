@@ -23,8 +23,8 @@ public class PersonalCabinetTest extends DriverConfig {
         driver = initDriver(System.getProperty("webdriver.driver"));
         driver.get(APP_URL);
         RestAssured.baseURI = APP_URL;
-        UserController.newUser(new createUser(EMAIL, PASSWORD, NAME));
-        userToken = UserController.getUserToken(new loginUser(EMAIL, PASSWORD));
+        UserController.newUser(new CreateUser(EMAIL, PASSWORD, NAME));
+        userToken = UserController.getUserToken(new LoginUser(EMAIL, PASSWORD));
         AuthPage authenticationPage = new AuthPage(driver);
         driver.findElement(ACCOUNT_SIGNIN_BUTTON).click();
         authenticationPage.loginFromMainPage(EMAIL, PASSWORD);

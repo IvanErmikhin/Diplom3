@@ -22,8 +22,8 @@ public class LoginTest extends DriverConfig {
         driver = initDriver(System.getProperty("webdriver.driver"));
         driver.get(APP_URL);
         RestAssured.baseURI = APP_URL;
-        UserController.newUser(new createUser(EMAIL, PASSWORD, NAME));
-        userToken = UserController.getUserToken(new loginUser(EMAIL, PASSWORD));
+        UserController.newUser(new CreateUser(EMAIL, PASSWORD, NAME));
+        userToken = UserController.getUserToken(new LoginUser(EMAIL, PASSWORD));
         authPage = new AuthPage(driver);
     }
 

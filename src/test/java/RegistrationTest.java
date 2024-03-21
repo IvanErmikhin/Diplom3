@@ -27,7 +27,7 @@ public class RegistrationTest extends DriverConfig {
     public void successRegistrationTest() {
         RegisterPage registerPage = new RegisterPage(driver);
         registerPage.registration(NAME, EMAIL, PASSWORD);
-        loginUser loginUser = new loginUser(EMAIL, PASSWORD);
+        LoginUser loginUser = new LoginUser(EMAIL, PASSWORD);
         userToken = UserController.getUserToken(loginUser);
         String actualResult = driver.findElement(SIGN_IN_BUTTON).getText();
         assertEquals(EXPECTED_SUCCESSFUL_TEXT, actualResult);
